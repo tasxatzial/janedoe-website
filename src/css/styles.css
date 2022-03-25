@@ -1,0 +1,10 @@
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+}
+
+svg {
+    max-width: 8rem;
+    font-family: var(--ff-secondary);
+    font-weight: 400;
+}
