@@ -205,6 +205,38 @@ h3,
 
 .nav-button {
     z-index: 100;
+    padding: 1em;
+    background: 0;
+    border: none;
+}
+
+.hamburger-icon {
+    display: block;
+    position: relative;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+    width: 2rem;
+    height: 4px;
+    background-color: var(--color-primary);
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger-icon::before {
+    bottom: 10px;
+}
+
+.hamburger-icon::after {
+    top: 10px;
 }
 
 .btn {
