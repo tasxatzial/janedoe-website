@@ -67,7 +67,7 @@ svg {
 h1 {
     font-size: 3rem;
     font-weight: 300;
-    margin-bottom: .4em;
+    
 }
 
 h1 strong {
@@ -79,6 +79,17 @@ nav {
     font-size: 2.25rem;
 }
 
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+.title-home,
+.title-about {
+    margin-bottom: .4em;
+}
+
 h3,
 .subtitle,
 .footer-emailto {
@@ -87,12 +98,9 @@ h3,
 
 .subtitle-home,
 .subtitle-about {
-    font-family: var(--font-secondary);
-}
-
-.subtitle-home {
     width: fit-content;
     padding: .6em 1em;
+    font-family: var(--font-secondary);
     background-color: var(--color-primary);
 }
 
@@ -101,7 +109,10 @@ h2,
 h3,
 .subtitle {
     margin-top: 0;
-    line-height: 1;
+}
+
+.services-title {
+    color: var(--color-primary);
 }
 
 .services-title::after {
