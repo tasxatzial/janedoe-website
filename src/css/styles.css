@@ -1,6 +1,14 @@
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-secondary: 'Source Code Pro', monospace;
+    --color-primary: #16e0bd;
+    --color-dark: #303030;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
@@ -8,17 +16,48 @@ html {
 }
 
 body {
-    font-family: var(--ff-primary);
+    margin: 0;
+    font-family: var(--font-primary);
     font-size: 1rem;
     line-height: 1.5;
 }
+
+/*===================== LINK =====================*/
+
+a {
+    text-decoration: none;
+}
+
+.nav-link {
+    font-weight: 900;
+    color: white;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/*===================== IMAGE =====================*/
+
+img {
+    max-width: 100%;
+}
+
+svg {
+    max-width: 8rem;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+
+/*===================== TEXT =====================*/
 
 h1 {
     font-size: 3rem;
     font-weight: 300;
 }
 
-h2 {
+h2,
+nav {
     font-size: 2.25rem;
 }
 
@@ -30,7 +69,7 @@ h3,
 
 .subtitle-intro,
 .subtitle-about {
-    font-family: var(--ff-secondary);
+    font-family: var(--font-secondary);
 }
 
 h1,
@@ -44,6 +83,12 @@ h3,
     font-weight: 900;
 }
 
+/*===================== BUTTON =====================*/
+
+.nav-button {
+    z-index: 100;
+}
+
 .btn {
     font-family: inherit;
     font-weight: 900;
@@ -51,8 +96,30 @@ h3,
     text-transform: uppercase;
 }
 
-svg {
-    max-width: 8rem;
-    font-family: var(--ff-secondary);
-    font-weight: 400;
+/*===================== CONTAINER =====================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    width: 100%;
+    background-color: var(--color-dark);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
 }
