@@ -3,6 +3,54 @@
     --ff-secondary: 'Source Code Pro', monospace;
 }
 
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3,
+.subtitle,
+.footer-emailto {
+    font-size: 1.25rem;
+}
+
+.subtitle-intro,
+.subtitle-about {
+    font-family: var(--ff-secondary);
+}
+
+h1,
+h2,
+h3,
+.subtitle {
+    line-height: 1.3;
+}
+
+.footer-emailto {
+    font-weight: 900;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 svg {
     max-width: 8rem;
     font-family: var(--ff-secondary);
