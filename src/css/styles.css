@@ -53,6 +53,7 @@ a {
 /*===================== IMAGE =====================*/
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -60,6 +61,12 @@ svg {
     max-width: 8rem;
     font-family: var(--font-secondary);
     font-weight: 400;
+}
+
+.home-image,
+.about-image {
+    max-width: 250px;
+    margin: 2em auto 0;
 }
 
 /*===================== TEXT =====================*/
@@ -96,6 +103,11 @@ h3,
     font-size: 1.25rem;
 }
 
+.subtitle-home {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .subtitle-home,
 .subtitle-about {
     width: fit-content;
@@ -113,6 +125,15 @@ h3,
 
 .services-title {
     color: var(--color-primary);
+}
+
+.title-about {
+    text-align: center;   
+}
+
+.subtitle-about {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .services-title::after {
@@ -193,13 +214,16 @@ nav {
     list-style: none;
 }
 
+.home {
+    text-align: center;
+}
+
 .services {
     background-color: var(--color-dark);
     background-image: url(../img/services-bg_870.jpg);
     background-blend-mode: color-dodge;
     color: white;
     text-align: center;
-    
 }
 
 .service-info {
