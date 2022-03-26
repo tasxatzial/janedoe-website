@@ -31,8 +31,20 @@ body {
 
 /*===================== JS =====================*/
 
-.js-nav-open {
+.js-nav-open nav {
     left: 0;
+}
+
+.js-nav-open .hamburger-icon {
+    transform: rotate(-135deg);
+}
+
+.js-nav-open .hamburger-icon:after {
+    transform: rotate(90deg) translateX(-10px);
+}
+
+.js-nav-open .hamburger-icon:before {
+    display: none;
 }
 
 .js-stop-scrolling {
@@ -213,6 +225,7 @@ h3,
 .hamburger-icon {
     display: block;
     position: relative;
+    transition: transform .2s;
 }
 
 .hamburger-icon,
