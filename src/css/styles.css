@@ -280,9 +280,12 @@ header {
     padding: 1em;
 }
 
-footer,
 section {
     padding: 3em 1em;
+}
+
+footer {
+    padding: 2em 1em;
 }
 
 header {
@@ -322,6 +325,7 @@ footer {
     background-color: var(--color-dark);
     background-image: url(../img/services-bg_870.jpg);
     background-blend-mode: color-dodge;
+    background-size: cover;
     text-align: center;
 }
 
@@ -338,7 +342,7 @@ footer {
 
 .work-images-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -362,42 +366,40 @@ footer {
         font-size: 110%;
     }
 
-    .home-subtitle {
-        grid-area: subtitle;
-        grid-column: 1 / -1;
-        position: relative;
-        left: -1.5em;
-        text-align: right;
-        align-self: end;
-        width: calc(100% + 1.5em);
-    }
+    /*===================== TEXT =====================*/
 
+    .home-subtitle,
     .about-subtitle {
         grid-area: subtitle;
         grid-column: 1 / -1;
         align-self: start;
         position: relative;
         left: -1.5em;
+    }
+
+    .home-subtitle {
+        text-align: right;
+        width: calc(100% + 1.5em);
+    }
+
+    .about-subtitle {
         width: calc(100% + 3em);
         padding-left: 1.5em;
         padding-right: calc(250px + 3rem);
-        margin: 0 0 1em;
+        margin-bottom: 1em;
     }
 
-    .home-title {
+    .home-title,
+    .about-title {
         grid-area: title;
         text-align: left;
     }
 
     .about-title {
-        grid-area: title;
         margin-bottom: .5em;
-        text-align: left;
     }
     
-    .about-body {
-        grid-area: body;
-    }
+    /*===================== IMAGE =====================*/
 
     .home-image,
     .about-image {
@@ -406,13 +408,29 @@ footer {
         margin-top: 0;
     }
     
+    /*===================== CONTAINER =====================*/
+
+    .home,
+    header,
+    .about,
+    .services-body {
+        margin: 0 auto;
+        max-width: 60rem;
+    }
+
+    .home,
+    .about {
+        grid-column-gap: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
     .home {
         display: grid;
         grid-template-columns: min-content max-content;
         grid-template-areas: "img title"
                              "img subtitle";
-        grid-column-gap: 2em;
-        justify-content: center;
+        width: min-content;
     }
 
     .about {
@@ -422,12 +440,12 @@ footer {
                              "subtitle img"
                              "body img"
                              ". img";
-        grid-column-gap: 2em;
         align-content: start;
-        padding-left: 3em;
-        padding-right: 3em;
-        margin: 0 auto;
-        max-width: 60rem;
+
+    }
+
+    .about-body {
+        grid-area: body;
     }
 }
 
@@ -438,5 +456,9 @@ footer {
 
     .service-info + .service-info {
         margin-left: 2.5em;
+    }
+
+    .services {
+        background-image: url(../img/services-bg_1450.jpg);
     }
 }
