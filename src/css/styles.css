@@ -393,3 +393,13 @@ footer {
         margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 60rem) {
+    .services-body {
+        display: flex;
+    }
+
+    .service-info + .service-info {
+        margin-left: 2.5em;
+    }
+}
