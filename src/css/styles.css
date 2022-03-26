@@ -178,7 +178,7 @@ h3,
 .home-subtitle,
 .about-subtitle {
     width: fit-content;
-    padding: .6em 1em;
+    padding: .4em 1em;
     font-family: var(--font-secondary);
     background-color: var(--color-primary);
 }
@@ -296,6 +296,7 @@ nav {
     bottom: 0;
     left: 100%;
     right: 0;
+    z-index: 99;
     width: 100%;
     background-color: var(--color-dark);
     transition: left 0.25s;
@@ -354,4 +355,41 @@ footer {
     padding: 0;
     margin: 1.5em 0 0;
     list-style: none;
+}
+
+@media screen and (min-width: 45rem) {
+    html {
+        font-size: 110%;
+    }
+
+    .home-subtitle {
+        grid-area: subtitle;
+        grid-column: 1 / -1;
+        position: relative;
+        left: -1.5em;
+        text-align: right;
+        align-self: end;
+        width: calc(100% + 1.5em);
+    }
+
+    .home-title {
+        grid-area: title;
+        text-align: left;
+    }
+
+    .home-image {
+        grid-area: img;
+        z-index: 5;
+        margin-top: 0;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-template-areas: "img title"
+                             "img subtitle";
+        grid-column-gap: 2em;
+        justify-content: center;
+        margin: 0 auto;
+    }
 }
