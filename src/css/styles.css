@@ -72,8 +72,14 @@ a {
     background-color: var(--color-primary);
 }
 
+.work-link:focus {
+    position: relative;
+    z-index: 10;
+}
+
 .footer-emailto {
     font-weight: 900;
+    font-size: 1.25rem;
     color: var(--color-primary);
 }
 
@@ -112,11 +118,6 @@ svg {
 .work-image {
     transition: transform .5s,
                 opacity .25s;
-}
-
-.work-link:focus {
-    position: relative;
-    z-index: 10;
 }
 
 .work-link:focus .work-image,
@@ -164,8 +165,7 @@ h3 {
 }
 
 h3,
-.subtitle,
-.footer-emailto {
+.subtitle {
     font-size: 1.25rem;
 }
 
@@ -277,6 +277,8 @@ h3,
 /*===================== CONTAINER =====================*/
 
 header {
+    display: flex;
+    justify-content: space-between;
     padding: 1em;
 }
 
@@ -286,11 +288,7 @@ section {
 
 footer {
     padding: 2em 1em;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
+    background-color: #111;
 }
 
 nav {
@@ -346,10 +344,6 @@ footer {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-}
-
-footer {
-    background-color: #111;
 }
 
 .social-list {
