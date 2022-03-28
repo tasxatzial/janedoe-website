@@ -220,6 +220,7 @@ h3,
     padding: 1em;
     background: 0;
     border: none;
+    cursor: pointer;
 }
 
 .hamburger-icon {
