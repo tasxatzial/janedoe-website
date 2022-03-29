@@ -113,6 +113,7 @@ svg {
     min-width: 200px;
     max-width: 250px;
     margin: 2em auto 0;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
 }
 
 .work-image {
