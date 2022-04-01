@@ -8,7 +8,7 @@ This project was built with:
 
 * Plain HTML, CSS, Javascript.
 
-The following concepts/techniques are demonstrated:
+### Frontend
 
 * Responsive website (CSS grid, CSS flexbox).
 * Hamburger menu using plain CSS/javascript.
