@@ -40,7 +40,7 @@ body {
 }
 
 .js-nav-open .hamburger-icon:after {
-    transform: rotate(90deg) translateX(-10px);
+    transform: rotate(90deg) translateX(-0.625rem);
 }
 
 .js-nav-open .hamburger-icon:before {
@@ -218,7 +218,7 @@ h3,
 
 .nav-button {
     z-index: 100;
-    padding: 1em;
+    padding: 0.875rem 0;
     background: 0;
     border: none;
     cursor: pointer;
@@ -234,7 +234,7 @@ h3,
 .hamburger-icon::before,
 .hamburger-icon::after {
     width: 2rem;
-    height: 4px;
+    height: 0.25rem;
     background-color: var(--color-primary);
 }
 
@@ -247,11 +247,11 @@ h3,
 }
 
 .hamburger-icon::before {
-    bottom: 10px;
+    bottom: 0.625rem;
 }
 
 .hamburger-icon::after {
-    top: 10px;
+    top: 0.625rem;
 }
 
 .btn {
