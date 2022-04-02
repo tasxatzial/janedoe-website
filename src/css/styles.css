@@ -32,7 +32,7 @@ body {
 /*===================== JS =====================*/
 
 .js-nav-open nav {
-    left: 0;
+    transform: translateX(-100%);
 }
 
 .js-nav-open .hamburger-icon {
@@ -302,7 +302,8 @@ nav {
     z-index: 99;
     width: 100%;
     background-color: var(--color-dark);
-    transition: left 0.25s;
+    transform: translateX(0);
+    transition: transform 0.25s;
 }
 
 .nav-list {
