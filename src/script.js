@@ -21,9 +21,18 @@ function toggleAriaHidden() {
     }
 }
 
+function toggleNavBtnLabel() {
+    if (navBtn.getAttribute('aria-label') === 'open navigation') {
+        navBtn.setAttribute('aria-label', 'close navigation');
+    } else {
+        navBtn.setAttribute('aria-label', 'open navigation');
+    }
+}
+
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
     document.body.classList.toggle('js-stop-scrolling');
+    toggleNavBtnLabel();
     toggleFocusable();
     toggleAriaHidden();
 }
