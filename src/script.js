@@ -1,5 +1,6 @@
 const navBtn = document.querySelector('.nav-button');
-const navLinks = document.querySelectorAll('.nav-link');
+const nav = document.querySelector('nav');
+const navLinks = nav.querySelectorAll('.nav-link');
 const tabindexed = document.querySelectorAll('[tabindex]');
 
 function toggleNav() {
@@ -11,6 +12,11 @@ function toggleNav() {
         } else {
             tabindexed[i].setAttribute('tabindex', '0');
         }
+    }
+    if (nav.getAttribute('aria-hidden') === 'true') {
+        nav.setAttribute('aria-hidden', 'false');
+    } else {
+        nav.setAttribute('aria-hidden', 'true');
     }
 }
 
