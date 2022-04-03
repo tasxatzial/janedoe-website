@@ -11,7 +11,8 @@ This project was built with:
 ### Frontend
 
 * Responsive website (CSS grid, CSS flexbox).
-* Hamburger menu using plain CSS/javascript.
+* aria-* atrributes for assistive technology.
+* Hamburger menu using plain CSS, Javascript.
 * The hamburger and close navigation icons are created with CSS only.
 * The switch from the hamburger icon to the close navigation icon is achieved with CSS only (transitions & transforms).
 * Mobile first design.
