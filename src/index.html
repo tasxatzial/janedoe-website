@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Jane Doe - Homepage</title>
 </head>
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 12"><text x="0" y="9" font-size="12">&lt;devjane&gt;</text></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 12" class="logo"><text x="0" y="9" font-size="12">&lt;devjane&gt;</text></svg>
         <button aria-label="open navigation" class="nav-button" aria-controls="nav"><span class="hamburger-icon"></span></button>
-        <nav id="nav" class="nav" aria-hidden="true">
+        <nav id="nav">
             <ul class="nav-list">
-                <li><a href="#home" class="nav-link" tabindex="-1">Home</a></li>
-                <li><a href="#services" class="nav-link" tabindex="-1">My services</a></li>
-                <li><a href="#about" class="nav-link" tabindex="-1">About me</a></li>
-                <li><a href="#work" class="nav-link" tabindex="-1">My work</a></li>
+                <li><a href="#home" class="nav-link" tabindex="-1" aria-hidden="true">Home</a></li>
+                <li><a href="#services" class="nav-link" tabindex="-1" aria-hidden="true">My services</a></li>
+                <li><a href="#about" class="nav-link" tabindex="-1" aria-hidden="true">About me</a></li>
+                <li><a href="#work" class="nav-link" tabindex="-1" aria-hidden="true">My work</a></li>
             </ul>
         </nav>
     </header>

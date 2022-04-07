@@ -1,23 +1,40 @@
 const navBtn = document.querySelector('.nav-button');
 const nav = document.querySelector('nav');
 const navLinks = nav.querySelectorAll('.nav-link');
-const focusable = document.querySelectorAll('[tabindex]');
+const tabFocusable = document.querySelectorAll('[tabindex="0"]');
+const sections = document.querySelectorAll('section');
+const footer = document.querySelector('footer');
+const logo = document.querySelector('.logo');
 
-function toggleFocusable() {
-    for (let i = 0; i < focusable.length; i++) {
-        if (focusable[i].getAttribute('tabindex') === '0') {
-            focusable[i].setAttribute('tabindex', '-1');
+function toggleTabFocusable() {
+    for (let i = 0; i < tabFocusable.length; i++) {
+        if (tabFocusable[i].getAttribute('tabindex') === '0') {
+            tabFocusable[i].setAttribute('tabindex', '-1');
         } else {
-            focusable[i].setAttribute('tabindex', '0');
+            tabFocusable[i].setAttribute('tabindex', '0');
         }
     }
 }
 
 function toggleAriaHidden() {
-    if (nav.getAttribute('aria-hidden') === 'true') {
-        nav.setAttribute('aria-hidden', 'false');
+    if (footer.getAttribute('aria-hidden') === 'true') {
+        footer.setAttribute('aria-hidden', 'false');
+        logo.setAttribute('aria-hidden', 'false');
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].setAttribute('aria-hidden', 'false');
+        }
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].setAttribute('aria-hidden', 'true');
+        }
     } else {
-        nav.setAttribute('aria-hidden', 'true');
+        footer.setAttribute('aria-hidden', 'true');
+        logo.setAttribute('aria-hidden', 'true');
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].setAttribute('aria-hidden', 'true');
+        }
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].setAttribute('aria-hidden', 'false');
+        }
     }
 }
 
@@ -33,7 +50,7 @@ function toggleNav() {
     document.body.classList.toggle('js-nav-open');
     document.body.classList.toggle('js-stop-scrolling');
     toggleNavBtnLabel();
-    toggleFocusable();
+    toggleTabFocusable();
     toggleAriaHidden();
 }
 
