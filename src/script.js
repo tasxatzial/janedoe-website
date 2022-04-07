@@ -38,18 +38,20 @@ function toggleAriaHidden() {
     }
 }
 
-function toggleNavBtnLabel() {
-    if (navBtn.getAttribute('aria-label') === 'open navigation') {
+function toggleNavBtn() {
+    if (navBtn.getAttribute('aria-expanded') === 'true') {
         navBtn.setAttribute('aria-label', 'close navigation');
+        navBtn.setAttribute('aria-expanded', 'false');
     } else {
         navBtn.setAttribute('aria-label', 'open navigation');
+        navBtn.setAttribute('aria-expanded', 'true');
     }
 }
 
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
     document.body.classList.toggle('js-stop-scrolling');
-    toggleNavBtnLabel();
+    toggleNavBtn();
     toggleTabFocusable();
     toggleAriaHidden();
 }

@@ -13,8 +13,11 @@
 </head>
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 12" class="logo"><text x="0" y="9" font-size="12">&lt;devjane&gt;</text></svg>
-        <button aria-label="open navigation" class="nav-button" aria-controls="nav"><span class="hamburger-icon"></span></button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 12" class="logo" aria-labelledby="devjane" role="img">
+            <title id="devjane">devjane logo</title>
+            <text x="0" y="9" font-size="12" role="presentation">&lt;devjane&gt;</text>
+        </svg>
+        <button aria-label="open navigation" class="nav-button" aria-controls="nav" aria-expanded="false"><span class="hamburger-icon"></span></button>
         <nav id="nav">
             <ul class="nav-list">
                 <li><a href="#home" class="nav-link" tabindex="-1" aria-hidden="true">Home</a></li>
@@ -75,10 +78,10 @@
     <footer>
         <a href="mailto:hello@jave.dev" class="footer-emailto" tabindex="0">hello@jave.dev</a>
         <ul class="social-list">
-            <li><a href="https://codepen.io" class="social-link" tabindex="0"><i class="fa-brands fa-codepen"></i></a></li>
-            <li><a href="https://dribble.com" class="social-link" tabindex="0"><i class="fa-brands fa-dribbble"></i></a></li>
-            <li><a href="https://twitter.com" class="social-link" tabindex="0"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="https://github.com" class="social-link" tabindex="0"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://codepen.io" class="social-link" tabindex="0" aria-label="codepen"><i class="fa-brands fa-codepen"></i></a></li>
+            <li><a href="https://dribble.com" class="social-link" tabindex="0" aria-label="dribble"><i class="fa-brands fa-dribbble"></i></a></li>
+            <li><a href="https://twitter.com" class="social-link" tabindex="0" aria-label="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://github.com" class="social-link" tabindex="0" aria-label="github"><i class="fa-brands fa-github"></i></a></li>
         </ul>
     </footer>
     <script src="script.js"></script>
