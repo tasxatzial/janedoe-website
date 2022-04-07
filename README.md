@@ -13,8 +13,7 @@ This project was built with:
 * Responsive website (CSS grid, CSS flexbox).
 * aria-* atrributes for assistive technology.
 * Hamburger menu using plain CSS, Javascript.
-* The hamburger and close navigation icons are created with CSS only.
-* The switch from the hamburger icon to the close navigation icon is achieved with CSS only (transitions & transforms).
+* Hamburger and close navigation icons using CSS only. Switch between them using CSS only.
 * Mobile first design.
 
 ## Run locally
