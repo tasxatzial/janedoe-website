@@ -1,17 +1,17 @@
 const navBtn = document.querySelector('.nav-button');
 const nav = document.querySelector('nav');
 const navLinks = nav.querySelectorAll('.nav-link');
-const tabFocusable = document.querySelectorAll('[tabindex="0"]');
+const tabIndexed = document.querySelectorAll('[tabindex]');
 const sections = document.querySelectorAll('section');
 const footer = document.querySelector('footer');
 const logo = document.querySelector('.logo');
 
 function toggleTabFocusable() {
-    for (let i = 0; i < tabFocusable.length; i++) {
-        if (tabFocusable[i].getAttribute('tabindex') === '0') {
-            tabFocusable[i].setAttribute('tabindex', '-1');
+    for (let i = 0; i < tabIndexed.length; i++) {
+        if (tabIndexed[i].getAttribute('tabindex') === '0') {
+            tabIndexed[i].setAttribute('tabindex', '-1');
         } else {
-            tabFocusable[i].setAttribute('tabindex', '0');
+            tabIndexed[i].setAttribute('tabindex', '0');
         }
     }
 }
