@@ -2,7 +2,6 @@
     --font-primary: 'Source Sans Pro', sans-serif;
     --font-secondary: 'Source Code Pro', monospace;
     --color-primary: #16e0bd;
-    --color-secondary: #10bb9e;
     --color-dark: #303030;
 }
 
@@ -22,11 +21,6 @@ body {
     font-family: var(--font-primary);
     font-size: 1rem;
     line-height: 1.5;
-}
-
-:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
 }
 
 /*===================== JS =====================*/
@@ -63,6 +57,7 @@ a {
     color: white;
 }
 
+.nav-link:focus,
 .nav-link:hover {
     color: var(--color-primary);
 }
@@ -75,6 +70,8 @@ a {
 .work-link:focus {
     position: relative;
     z-index: 10;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 .footer-emailto {
@@ -93,6 +90,12 @@ a {
     margin: 0 .5em;
     font-size: 1.5rem;
     color: var(--color-primary);
+    transition: transform .2s;
+}
+
+.social-link:focus,
+.social-link:hover {
+    transform: scale(1.2);
 }
 
 /*===================== IMAGE =====================*/
@@ -125,15 +128,6 @@ svg {
 .work-image:hover {
     transform: scale(1.1);
     opacity: 0.7;
-}
-
-.fa-brands {
-    transform: scale(1.0);
-    transition: transform .2s;
-}
-
-.fa-brands:hover {
-    transform: scale(1.2);
 }
 
 /*===================== TEXT =====================*/
@@ -268,12 +262,14 @@ h3,
     transition: transform .2s;
 }
 
+.btn:focus,
 .btn:hover {
     transform: scale(1.05);
 }
 
 .btn:active {
-    background-color: var(--color-secondary);
+    position: relative;
+    top: 2px;
 }
 
 /*===================== CONTAINER =====================*/
