@@ -29,6 +29,12 @@ body {
     transform: translateX(-100%);
 }
 
+.js-nav-open .nav-button {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+}
+
 .js-nav-open .hamburger-icon {
     transform: rotate(-135deg);
 }
@@ -39,11 +45,6 @@ body {
 
 .js-nav-open .hamburger-icon:before {
     display: none;
-}
-
-.js-stop-scrolling {
-    overflow: hidden;
-    height: 100%;
 }
 
 /*===================== LINK =====================*/
@@ -107,6 +108,7 @@ img {
 
 svg {
     max-width: 7rem;
+    height: 2rem;
     font-family: var(--font-secondary);
     font-weight: 400;
 }
