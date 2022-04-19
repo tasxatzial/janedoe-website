@@ -29,10 +29,10 @@ body {
     transform: translateX(-100%);
 }
 
-.js-nav-open .nav-button {
-    position: fixed;
-    right: 1em;
-    top: 1em;
+.js-nav-open header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
 
 .js-nav-open .hamburger-icon {
@@ -137,7 +137,6 @@ svg {
 h1 {
     font-size: 3rem;
     font-weight: 300;
-    
 }
 
 h1 strong {
