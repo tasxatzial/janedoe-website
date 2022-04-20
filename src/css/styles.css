@@ -108,7 +108,7 @@ img {
 
 svg {
     max-width: 7rem;
-    height: 2rem;
+    height: 2rem; /* required in older browsers */
     font-family: var(--font-secondary);
     font-weight: 400;
 }
