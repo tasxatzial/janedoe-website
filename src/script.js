@@ -13,7 +13,7 @@ function toggleNav() {
         
     } else {
         for (let i = 0; i < navLinks.length; i++) {
-            navLinks[i].setAttribute('hidden', 'true');
+            navLinks[i].setAttribute('hidden', '');
         }
         navBtn.setAttribute('aria-label', 'open navigation');
         navBtn.setAttribute('aria-expanded', 'false');  
