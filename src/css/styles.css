@@ -12,7 +12,6 @@
 }
 
 html {
-    font-size: 100%;
     scroll-behavior: smooth;
 }
 
@@ -64,7 +63,9 @@ a {
 }
 
 .work-link {
+    display: block;
     overflow: hidden;
+    max-width: 480px;
     background-color: var(--color-primary);
 }
 
@@ -107,16 +108,16 @@ img {
 }
 
 svg {
-    max-width: 7rem;
-    height: 2rem; /* required in older browsers */
+    max-width: 7em;
+    height: 2em; /* required in older browsers */
     font-family: var(--font-secondary);
     font-weight: 400;
 }
 
 .home-image,
 .about-image {
-    min-width: 200px;
-    max-width: 250px;
+    min-width: 12.5em;
+    max-width: 16em;
     margin: 2em auto 0;
     box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
 }
@@ -213,7 +214,7 @@ h3,
 
 .nav-button {
     z-index: 100;
-    padding: 0.875rem 0;
+    padding: 0.875em 0;
     background: 0;
     border: none;
     cursor: pointer;
@@ -328,7 +329,7 @@ footer {
 }
 
 .service-info {
-    max-width: 35rem;
+    max-width: 35em;
     margin: 0 auto 2em;
     color: white;
 }
@@ -340,8 +341,9 @@ footer {
 
 .work-images-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    max-width: 1000px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    max-width: 62.5em;
     margin-left: auto;
     margin-right: auto;
 }
@@ -355,10 +357,9 @@ footer {
     list-style: none;
 }
 
-@media screen and (min-width: 45rem) {
-    html {
-        font-size: 110%;
-    }
+/*************************************** HIGH RES ***************************************/
+
+@media screen and (min-width: 45em) {
 
     /*===================== TEXT =====================*/
 
@@ -379,7 +380,7 @@ footer {
     .about-subtitle {
         width: calc(100% + 3em);
         padding-left: 1.5em;
-        padding-right: calc(250px + 3rem);
+        padding-right: calc(16em + 3em);
         margin-bottom: 1em;
     }
 
@@ -409,7 +410,7 @@ footer {
     .about,
     .services-body {
         margin: 0 auto;
-        max-width: 60rem;
+        max-width: 60em;
     }
 
     .home,
@@ -429,7 +430,7 @@ footer {
 
     .about {
         display: grid;
-        grid-template-columns: 1fr 250px;
+        grid-template-columns: 1fr 16em;
         grid-template-areas: "title img"
                              "subtitle img"
                              "body img"
@@ -443,7 +444,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 60em) {
     .services-body {
         display: flex;
     }
