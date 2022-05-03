@@ -13,7 +13,7 @@ This project was built with:
 * Responsive website (CSS grid, CSS flexbox).
 * aria-* atrributes for assistive technology.
 * Hamburger menu for mobile.
-* Open and close navigation created with CSS. Animated switch between them using CSS.
+* Open and close navigation created with CSS. Change from one to the other using transitions.
 * Mobile first design.
 
 ## Run locally
