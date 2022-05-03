@@ -60,6 +60,10 @@ body {
     display: none;
 }
 
+.js-nav-open .nav-link {
+    visibility: visible;
+}
+
 /*===================== LINK =====================*/
 
 a {
@@ -67,6 +71,7 @@ a {
 }
 
 .nav-link {
+    visibility: hidden;
     font-weight: 900;
     color: white;
 }
