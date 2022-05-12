@@ -298,8 +298,7 @@ h3,
 }
 
 .btn:active {
-    position: relative;
-    top: 2px;
+    background-color:aliceblue;
 }
 
 /*===================== CONTAINER =====================*/
