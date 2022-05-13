@@ -303,6 +303,10 @@ h3,
 
 /*===================== CONTAINER =====================*/
 
+body > * {
+    min-width: 15em;
+}
+
 header {
     display: flex;
     justify-content: space-between;
