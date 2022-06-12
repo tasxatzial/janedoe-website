@@ -43,6 +43,9 @@ function toggleNav() {
 
 navBtn.addEventListener('click', toggleNav);
 
-for (let i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener('click', toggleNav);
-}
+nav.addEventListener('click', function(e) {
+    if (!e.target.closest('link')) {
+        return;
+    }
+    toggleNav();
+});
