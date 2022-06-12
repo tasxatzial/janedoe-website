@@ -29,6 +29,7 @@ navBtn.addEventListener('keydown', function(e) {
 
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
+    document.body.classList.toggle('stop-scrolling');
     if (document.body.classList.contains('js-nav-open')) {
         document.body.focus();
         navBtn.setAttribute('aria-label', 'close navigation');
