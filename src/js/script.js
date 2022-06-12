@@ -13,6 +13,13 @@ nav.addEventListener('keydown', function(e) {
     }
 );
 
+nav.addEventListener('click', function(e) {
+    if (!e.target.closest('link')) {
+        return;
+    }
+    toggleNav();
+});
+
 navBtn.addEventListener('keydown', function(e) {
     if (document.body.classList.contains('js-nav-open')) {
         if (e.key === 'Tab' || e.keyCode === 9) {
@@ -27,6 +34,8 @@ navBtn.addEventListener('keydown', function(e) {
     }
 });
 
+navBtn.addEventListener('click', toggleNav);
+
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
     document.body.classList.toggle('stop-scrolling');
@@ -40,12 +49,3 @@ function toggleNav() {
         navBtn.setAttribute('aria-expanded', 'false');  
     }
 }
-
-navBtn.addEventListener('click', toggleNav);
-
-nav.addEventListener('click', function(e) {
-    if (!e.target.closest('link')) {
-        return;
-    }
-    toggleNav();
-});
