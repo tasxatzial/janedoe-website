@@ -134,9 +134,9 @@ svg {
 
 .home-image-container,
 .about-image-container {
-    min-width: 12.5em;
-    max-width: 16em;
-    margin: 2em auto 0;
+    min-width: 12.5rem;
+    max-width: 16rem;
+    margin: 2rem auto 0;
 }
 
 .home-image,
@@ -366,8 +366,8 @@ footer {
 .work-images-container {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    max-width: 62.5em;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    max-width: 62.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -404,7 +404,7 @@ footer {
     .about-subtitle {
         width: calc(100% + 3em);
         padding-left: 1.5em;
-        padding-right: calc(16em + 3em);
+        padding-right: calc(16rem + 3em);
         margin-bottom: 1em;
     }
 
@@ -454,7 +454,7 @@ footer {
 
     .about {
         display: grid;
-        grid-template-columns: 1fr 16em;
+        grid-template-columns: 1fr 16rem;
         grid-template-areas: "title img"
                              "subtitle img"
                              "body img"
