@@ -1,6 +1,7 @@
 const nav = document.querySelector('nav');
 const navBtn = document.querySelector('.nav-button');
 const navLinks = nav.querySelectorAll('.nav-link');
+const navList = nav.querySelector('.nav-list');
 
 nav.addEventListener('keydown', function(e) {
     if (e.key === 'Tab' || e.keyCode === 9) {
@@ -13,11 +14,10 @@ nav.addEventListener('keydown', function(e) {
     }
 );
 
-nav.addEventListener('click', function(e) {
-    if (!e.target.closest('link')) {
-        return;
+navList.addEventListener('click', function(e) {
+    if (e.target.closest('a')) {
+        toggleNav();
     }
-    toggleNav();
 });
 
 navBtn.addEventListener('keydown', function(e) {
