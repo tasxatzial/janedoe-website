@@ -38,12 +38,15 @@ navBtn.addEventListener('click', toggleNav);
 
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
-    document.body.classList.toggle('stop-scrolling');
     if (document.body.classList.contains('js-nav-open')) {
+        if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
+            document.body.classList.add('js-no-scroll');
+        }
         document.body.focus();
         navBtn.setAttribute('aria-label', 'close navigation');
         navBtn.setAttribute('aria-expanded', 'true'); 
     } else {
+        document.body.classList.remove('js-no-scroll');
         navBtn.focus();
         navBtn.setAttribute('aria-label', 'open navigation');
         navBtn.setAttribute('aria-expanded', 'false');  
