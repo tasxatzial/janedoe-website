@@ -42,13 +42,12 @@ function toggleNav() {
         if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
             document.body.classList.add('js-no-scroll');
         }
-        document.body.focus();
         navBtn.setAttribute('aria-label', 'close navigation');
         navBtn.setAttribute('aria-expanded', 'true'); 
     } else {
         document.body.classList.remove('js-no-scroll');
-        navBtn.focus();
         navBtn.setAttribute('aria-label', 'open navigation');
         navBtn.setAttribute('aria-expanded', 'false');  
     }
+    navBtn.focus();
 }
