@@ -41,7 +41,9 @@ body.js-no-scroll {
 }
 
 .js-nav-open nav {
+    visibility: visible;
     transform: translateX(-100%);
+    transition-delay: 0s;
 }
 
 .js-nav-open header {
@@ -316,6 +318,7 @@ footer {
 }
 
 nav {
+    visibility: hidden;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -325,7 +328,8 @@ nav {
     width: 100%;
     background-color: var(--color-dark);
     transform: translateX(0);
-    transition: transform 0.25s;
+    transition: transform 0.25s,
+                visibility 0s 0.25s;
 }
 
 .nav-list {
