@@ -363,13 +363,15 @@ footer {
     text-align: center;
 }
 
-.work-images-container {
+.work-images-list {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     max-width: 62.5rem;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
+    list-style: none;
 }
 
 .social-list {
