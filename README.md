@@ -1,12 +1,12 @@
 # Jane Doe portfolio website
 
-A simple portfolio website of an imaginary person.
+A simple portfolio website about an imaginary person.
 
-See it live [here](https://tasxatzial.github.io/janedoe-website).
+See the live version [here](https://tasxatzial.github.io/janedoe-website).
 
 ## Implementation
 
-* Responsive website (CSS grid + flexbox).
+* Responsive website (grid + flexbox).
 * aria-* atrributes for assistive technology.
 * Open and close navigation icons are created with CSS only.
 * Mobile first design.
@@ -17,11 +17,12 @@ See it live [here](https://tasxatzial.github.io/janedoe-website).
 
 ## Dependencies
 
-* [:focus-visible polyfill](https://github.com/WICG/focus-visible).
+* [:focus-visible](https://github.com/WICG/focus-visible) polyfill.
+* [Font awesome](https://fontawesome.com/) icons.
 
 ## Run locally
 
-Download the repo and open 'src/index.html' in your browser.
+Download the repo and open 'src/index.html' in the browser.
 
 ## Screenshots
 
