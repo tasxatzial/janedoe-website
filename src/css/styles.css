@@ -128,8 +128,8 @@ img {
 }
 
 svg {
-    max-width: 7em;
-    height: 2em; /* required in older browsers */
+    max-width: 7rem;
+    height: 2rem; /* required in older browsers */
     font-family: var(--font-secondary);
     font-weight: 400;
 }
@@ -299,7 +299,7 @@ h3,
 /*===================== CONTAINER =====================*/
 
 body > * {
-    min-width: 15em;
+    min-width: 15rem;
 }
 
 header {
@@ -357,7 +357,7 @@ footer {
 }
 
 .service-info {
-    max-width: 35em;
+    max-width: 35rem;
     margin: 0 auto 2em;
     color: white;
 }
@@ -440,12 +440,12 @@ footer {
     .about,
     .services-body {
         margin: 0 auto;
-        max-width: 60em;
+        max-width: 60rem;
     }
 
     .home,
     .about {
-        grid-column-gap: 2em;
+        grid-column-gap: 2rem;
         padding-left: 3em;
         padding-right: 3em;
     }
