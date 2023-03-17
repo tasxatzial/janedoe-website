@@ -1,40 +1,37 @@
 const nav = document.querySelector('nav');
-const navBtn = document.querySelector('.nav-button');
 const navLinks = nav.querySelectorAll('.nav-link');
-const navList = nav.querySelector('.nav-list');
+const toggleNavBtn = document.querySelector('.nav-button');
 
-nav.addEventListener('keydown', function(e) {
-    if (e.key === 'Tab' || e.keyCode === 9) {
-        if ((e.shiftKey && document.activeElement === navLinks[0]) ||
-            (!e.shiftKey && document.activeElement === navLinks[navLinks.length - 1])) {
-                navBtn.focus();
-                e.preventDefault();
+toggleNavBtn.addEventListener('click', toggleNav);
+nav.addEventListener('click', closeNav);
+
+/* trap keyboard navigation inside menu when it is open */
+nav.addEventListener('keydown', navigateMenu);
+
+function navigateMenu(event) {
+    if (!document.body.classList.contains('js-nav-open')) {
+        return;
+    }
+    if (event.key === 'Tab' || event.keyCode === 9) {
+        if (event.shiftKey) {
+            if (document.activeElement === closeNavBtn) {
+                navLinks[navLinks.length - 1].focus();
+                event.preventDefault();
+            }
+        } else {
+            if (document.activeElement === navLinks[navLinks.length - 1]) {
+                toggleNavBtn.focus();
+                event.preventDefault();
             }
         }
     }
-);
+}
 
-navList.addEventListener('click', function(e) {
-    if (e.target.closest('a')) {
+function closeNav(event) {
+    if (event.target.closest('a')) {
         toggleNav();
     }
-});
-
-navBtn.addEventListener('keydown', function(e) {
-    if (document.body.classList.contains('js-nav-open')) {
-        if (e.key === 'Tab' || e.keyCode === 9) {
-            if (e.shiftKey) {
-                navLinks[navLinks.length - 1].focus();
-                e.preventDefault();
-            } else {
-                navLinks[0].focus();
-                e.preventDefault();
-            }
-        }
-    }
-});
-
-navBtn.addEventListener('click', toggleNav);
+}
 
 function toggleNav() {
     document.body.classList.toggle('js-nav-open');
@@ -42,12 +39,12 @@ function toggleNav() {
         if (document.documentElement.scrollHeight > document.documentElement.clientHeight) {
             document.body.classList.add('js-no-scroll');
         }
-        navBtn.setAttribute('aria-label', 'close navigation');
-        navBtn.setAttribute('aria-expanded', 'true'); 
+        toggleNavBtn.setAttribute('aria-label', 'close navigation');
+        toggleNavBtn.setAttribute('aria-expanded', 'true'); 
     } else {
         document.body.classList.remove('js-no-scroll');
-        navBtn.setAttribute('aria-label', 'open navigation');
-        navBtn.setAttribute('aria-expanded', 'false');  
+        toggleNavBtn.setAttribute('aria-label', 'open navigation');
+        toggleNavBtn.setAttribute('aria-expanded', 'false');  
     }
-    navBtn.focus();
+    toggleNavBtn.focus();
 }
