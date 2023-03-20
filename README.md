@@ -2,20 +2,24 @@
 
 A simple portfolio website about an imaginary person.
 
-See the live version [here](https://tasxatzial.github.io/janedoe-website).
+This project is based on a frontend course from [Scrimba](https://scrimba.com/). [Design specs](https://xd.adobe.com/spec/6ebfeb86-6eeb-4b69-77dc-ecf4c4506bcc-188e/) and starter files are provided by [Kevin Powell](https://github.com/kevin-powell).
 
 ## Implementation
 
-* Responsive website (grid + flexbox).
+* Responsive (grid + flexbox).
 * aria-* atrributes for assistive technology.
 * Open and close navigation icons are created with CSS only.
 * Mobile first design.
+
+While my implementation follows the course content loosely, it also incorporates improvements that address most of the underlying issues.
 
 ## Features
 
 * Hamburger menu for mobile.
 
 ## Dependencies
+
+External:
 
 * [:focus-visible](https://github.com/WICG/focus-visible) polyfill.
 * [Font awesome](https://fontawesome.com/) icons.
@@ -26,6 +30,4 @@ Download the repo and open 'src/index.html' in the browser.
 
 ## Screenshots
 
-* Original design: See [mockups](mockups/).
-
-* Final result -with improvements-: See [screenshots](screenshots/).
+See [screenshots](screenshots/).
