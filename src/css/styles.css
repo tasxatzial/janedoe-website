@@ -48,6 +48,11 @@ body.js-no-scroll {
     transition-delay: 0s;
 }
 
+.js-nav-open .nav-list {
+    opacity: 1;
+    transition: opacity 0.2s 0.1s ease-in; 
+}
+
 .js-nav-open header {
     position: sticky;
     z-index: 100;
@@ -66,10 +71,6 @@ body.js-no-scroll {
     display: none;
 }
 
-.js-nav-open .nav-link {
-    visibility: visible;
-}
-
 /*===================== LINK =====================*/
 
 a {
@@ -77,7 +78,6 @@ a {
 }
 
 .nav-link {
-    visibility: hidden;
     font-weight: 900;
     color: white;
 }
@@ -330,8 +330,8 @@ nav {
     width: 100%;
     background-color: var(--color-dark);
     transform: translateX(0);
-    transition: transform 0.25s,
-                visibility 0s 0.25s;
+    transition: transform 0.3s,
+                visibility 0s 0.3s;
 }
 
 .nav-list {
@@ -343,6 +343,8 @@ nav {
     padding: 0;
     height: 100%;
     list-style: none;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
 }
 
 .home,
