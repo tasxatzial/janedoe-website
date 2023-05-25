@@ -1,4 +1,5 @@
-const nav = document.querySelector('nav');
+const navContainer = document.querySelector('.nav-container');
+const nav = navContainer.querySelector('nav');
 const navLinks = nav.querySelectorAll('.nav-link');
 const toggleNavBtn = document.querySelector('.nav-button');
 
@@ -6,7 +7,7 @@ toggleNavBtn.addEventListener('click', toggleNav);
 nav.addEventListener('click', closeNav);
 
 /* trap keyboard navigation inside menu when it is open */
-nav.addEventListener('keydown', navigateMenu);
+navContainer.addEventListener('keydown', navigateMenu);
 
 function navigateMenu(event) {
     if (!document.body.classList.contains('js-nav-open')) {
@@ -14,7 +15,7 @@ function navigateMenu(event) {
     }
     if (event.key === 'Tab' || event.keyCode === 9) {
         if (event.shiftKey) {
-            if (document.activeElement === closeNavBtn) {
+            if (document.activeElement === toggleNavBtn) {
                 navLinks[navLinks.length - 1].focus();
                 event.preventDefault();
             }

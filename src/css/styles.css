@@ -54,8 +54,6 @@ body.js-no-scroll {
 }
 
 .js-nav-open header {
-    position: sticky;
-    z-index: 100;
     top: 0;
 }
 
@@ -239,7 +237,8 @@ h3,
 /*===================== BUTTON =====================*/
 
 .nav-button {
-    z-index: 100;
+    position: relative;
+    z-index: 10;
     padding: 0.875em 0;
     background: 0;
     border: none;
@@ -319,6 +318,10 @@ footer {
     background-color: #111;
 }
 
+.nav-container {
+    z-index: 100;
+}
+
 nav {
     visibility: hidden;
     position: fixed;
@@ -326,7 +329,6 @@ nav {
     bottom: 0;
     left: 100%;
     right: 0;
-    z-index: 99;
     width: 100%;
     background-color: var(--color-dark);
     transform: translateX(0);
