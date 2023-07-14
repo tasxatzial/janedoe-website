@@ -1,3 +1,5 @@
+'use strict';
+
 const navContainer = document.querySelector('.nav-container');
 const nav = navContainer.querySelector('nav');
 const navLinks = nav.querySelectorAll('.nav-link');
