@@ -1,8 +1,8 @@
 # Jane Doe landing page
 
-A simple portfolio landing page of an imaginary person.
+A simple portfolio landing page for an imaginary person.
 
-This project is based on a frontend course from [Scrimba](https://scrimba.com/). [Design specs](https://xd.adobe.com/spec/6ebfeb86-6eeb-4b69-77dc-ecf4c4506bcc-188e/) and starter files are provided by [Kevin Powell](https://github.com/kevin-powell).
+This project is part of a course on [Scrimba](https://scrimba.com). [Design specs](https://xd.adobe.com/spec/6ebfeb86-6eeb-4b69-77dc-ecf4c4506bcc-188e/) and starter files are provided by [Kevin Powell](https://github.com/kevin-powell).
 
 ## Implementation
 
@@ -26,7 +26,7 @@ External:
 
 ## Run locally
 
-Download the repo and open 'src/index.html' in the browser.
+Download the 'src' folder and open 'index.html' in the browser.
 
 ## Screenshots
 
