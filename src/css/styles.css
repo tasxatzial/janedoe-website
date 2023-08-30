@@ -31,15 +31,17 @@ body.js-no-scroll {
     height: 100%;
 }
 
-.js-focus-visible :focus:not(.focus-visible),
-:focus:not(:focus-visible) {
-    outline: none;
-}
 
-.js-focus-visible .focus-visible:not(.work-link),
-:focus-visible:not(.work-link) {
-    outline: 3px dotted var(--color-primary);
-    outline-offset: 2px;
+
+@supports selector(:focus-visible) {
+    :focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    :focus-visible:not(.work-link) {
+        outline: 3px dotted var(--color-primary);
+        outline-offset: 2px;
+    }
 }
 
 .js-nav-open nav {
