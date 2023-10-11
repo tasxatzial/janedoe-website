@@ -2,6 +2,7 @@
     --font-primary: 'Source Sans Pro', sans-serif;
     --font-secondary: 'Source Code Pro', monospace;
     --color-primary: #16e0bd;
+    --color-focus: #d616e0;
     --color-dark: #303030;
 }
 
@@ -39,7 +40,7 @@ body.js-no-scroll {
     }
 
     :focus-visible:not(.work-link) {
-        outline: 3px dotted var(--color-primary);
+        outline: 3px dotted var(--color-focus);
         outline-offset: 2px;
     }
 }
