@@ -22,7 +22,7 @@
         <div class="nav-container">
             <button aria-label="open navigation" class="nav-button" aria-controls="nav" aria-expanded="false"><span class="hamburger-icon"></span></button>
             <nav id="nav">
-                <ul class="nav-list">
+                <ul role="list" class="nav-list">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#services" class="nav-link">My services</a></li>
                     <li><a href="#about" class="nav-link">About me</a></li>
@@ -70,7 +70,7 @@
     <section id="work" class="work" aria-labelledby="work-title">
         <h2 id="work-title" class="work-title">My work</h2>
         <p class="subtitle work-subtitle">A selection of my range of work</p>
-        <ul class="work-images-list">
+        <ul class="work-images-list" role="list">
             <li><a href="#work" class="work-link"><img src="img/portfolio-01.jpg" alt="description for this work" class="work-image"></a></li>
             <li><a href="#work" class="work-link"><img src="img/portfolio-02.jpg" alt="description for this work" class="work-image"></a></li>
             <li><a href="#work" class="work-link"><img src="img/portfolio-03.jpg" alt="description for this work" class="work-image"></a></li>
@@ -83,9 +83,9 @@
             <li><a href="#work" class="work-link"><img src="img/portfolio-10.jpg" alt="description for this work" class="work-image"></a></li>
         </ul>
     </section>
-    <footer aria-label="Contact e-mail & social links">
+    <footer>
         <a href="mailto:hello@jave.dev" class="footer-emailto" aria-label="contact e-mail">hello@jave.dev</a>
-        <ul class="social-list">
+        <ul class="social-list" role="list" aria-label="social links">
             <li><a href="https://codepen.io" class="social-link" aria-label="codepen"><i class="fa-brands fa-codepen"></i></a></li>
             <li><a href="https://dribble.com" class="social-link" aria-label="dribble"><i class="fa-brands fa-dribbble"></i></a></li>
             <li><a href="https://twitter.com" class="social-link" aria-label="twitter"><i class="fa-brands fa-twitter"></i></a></li>
