@@ -40,8 +40,8 @@ body.js-no-scroll {
     }
 
     :focus-visible:not(.work-link) {
-        outline: 3px dotted var(--color-focus);
-        outline-offset: 2px;
+        outline: 3px dashed var(--color-primary);
+        outline-offset: 3px;
     }
 }
 
