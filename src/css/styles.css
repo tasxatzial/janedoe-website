@@ -32,16 +32,33 @@ body.js-no-scroll {
     height: 100%;
 }
 
+.js-focus-visible :focus:not(.focus-visible):not(.work-link) {
+    outline: none;
+}
 
+.js-focus-visible .focus-visible {
+    outline: 3px dotted var(--color-primary);
+    outline-offset: 2px;
+}
+
+.js-focus-visible .focus-visible.work-link {
+    position: relative;
+    z-index: 10;
+}
 
 @supports selector(:focus-visible) {
     :focus:not(:focus-visible) {
         outline: none;
     }
 
-    :focus-visible:not(.work-link) {
-        outline: 3px dashed var(--color-primary);
+    :focus-visible {
+        outline: 3px dotted var(--color-primary);
         outline-offset: 3px;
+    }
+
+    :focus-visible.work-link {
+        position: relative;
+        z-index: 10;
     }
 }
 
@@ -93,7 +110,7 @@ a {
     background-color: var(--color-primary);
 }
 
-.work-link:focus {
+.work-link:active {
     position: relative;
     z-index: 10;
     outline: 2px solid var(--color-primary);
