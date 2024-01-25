@@ -2,7 +2,6 @@
     --font-primary: 'Source Sans Pro', sans-serif;
     --font-secondary: 'Source Code Pro', monospace;
     --color-primary: #16e0bd;
-    --color-focus: #d616e0;
     --color-dark: #303030;
 }
 
@@ -62,15 +61,15 @@ body.js-no-scroll {
     }
 }
 
-.js-nav-open nav {
+.js-nav-open .nav-list {
     visibility: visible;
     transform: translateX(-100%);
-    transition-delay: 0s;
+    transition: transform 300ms;
 }
 
-.js-nav-open .nav-list {
+.js-nav-open .nav-link {
     opacity: 1;
-    transition: opacity 0.2s 0.1s ease-in; 
+    transition: opacity 200ms ease-in 100ms; 
 }
 
 .js-nav-open header {
@@ -98,6 +97,8 @@ a {
 .nav-link {
     font-weight: 900;
     color: white;
+    opacity: 0;
+    transition: opacity 100ms ease-out;
 }
 
 .nav-link:hover {
@@ -189,7 +190,7 @@ h1 strong {
 }
 
 h2,
-nav {
+.nav-list {
     font-size: 2.25rem;
 }
 
@@ -258,7 +259,7 @@ h3,
 
 .nav-button {
     position: relative;
-    z-index: 10;
+    z-index: 1000;
     padding: 0.875em 0;
     background: 0;
     border: none;
@@ -338,35 +339,27 @@ footer {
     background-color: #111;
 }
 
-.nav-container {
-    z-index: 100;
-}
-
-nav {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 100%;
-    right: 0;
-    width: 100%;
-    background-color: var(--color-dark);
-    transform: translateX(0);
-    transition: transform 0.3s,
-                visibility 0s 0.3s;
-}
-
 .nav-list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
+    background-color: var(--color-dark);
+    transform: translateX(0);
+    transition: transform 300ms,
+                visibility 300ms;
     list-style: none;
-    opacity: 0;
-    transition: opacity 0.1s ease-out;
 }
 
 .home,

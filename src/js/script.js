@@ -1,15 +1,14 @@
 'use strict';
 
-const navContainer = document.querySelector('.nav-container');
-const nav = navContainer.querySelector('nav');
+const nav = document.querySelector('nav');
 const navLinks = nav.querySelectorAll('.nav-link');
-const toggleNavBtn = document.querySelector('.nav-button');
+const toggleNavBtn = nav.querySelector('.nav-button');
 
 toggleNavBtn.addEventListener('click', toggleNav);
 nav.addEventListener('click', closeNav);
 
 /* trap keyboard navigation inside menu when it is open */
-navContainer.addEventListener('keydown', navigateMenu);
+nav.addEventListener('keydown', navigateMenu);
 
 function navigateMenu(event) {
     if (!document.body.classList.contains('js-nav-open')) {
@@ -23,7 +22,6 @@ function navigateMenu(event) {
             }
         } else {
             if (document.activeElement === navLinks[navLinks.length - 1]) {
-                toggleNavBtn.focus();
                 event.preventDefault();
             }
         }
@@ -49,5 +47,4 @@ function toggleNav() {
         toggleNavBtn.setAttribute('aria-label', 'open navigation');
         toggleNavBtn.setAttribute('aria-expanded', 'false');  
     }
-    toggleNavBtn.focus();
 }
