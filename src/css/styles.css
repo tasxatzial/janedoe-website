@@ -40,11 +40,6 @@ body.js-no-scroll {
     outline-offset: 2px;
 }
 
-.js-focus-visible .focus-visible.work-link {
-    position: relative;
-    z-index: 10;
-}
-
 @supports selector(:focus-visible) {
     :focus:not(:focus-visible) {
         outline: none;
@@ -53,11 +48,6 @@ body.js-no-scroll {
     :focus-visible {
         outline: 3px dotted var(--color-primary);
         outline-offset: 3px;
-    }
-
-    :focus-visible.work-link {
-        position: relative;
-        z-index: 10;
     }
 }
 
@@ -106,14 +96,14 @@ a {
 }
 
 .work-link {
-    display: block;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     background-color: var(--color-primary);
 }
 
 .work-link:active {
-    position: relative;
-    z-index: 10;
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
 }
@@ -168,6 +158,8 @@ svg {
 }
 
 .work-image {
+    aspect-ratio: 1.6;
+    object-fit: cover;
     transition: transform .5s,
                 opacity .25s;
 }
@@ -176,6 +168,10 @@ svg {
 .work-image:hover {
     transform: scale(1.1);
     opacity: 0.7;
+}
+
+.rounded-image {
+    border-radius: 0.15rem;
 }
 
 /*===================== TEXT =====================*/
@@ -253,6 +249,12 @@ h3,
 .work-subtitle {
     margin-bottom: 2em;
     color: white;
+}
+
+.project-title {
+    z-index: 5;
+    color: var(--color-dark);
+    background-color: var(--color-primary);
 }
 
 /*===================== BUTTON =====================*/
@@ -390,6 +392,8 @@ footer {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.5rem;
     max-width: 62.5rem;
     padding: 0;
     margin-left: auto;
