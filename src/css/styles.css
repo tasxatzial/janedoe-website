@@ -147,7 +147,6 @@ svg {
 
 .home-image-container,
 .about-image-container {
-    min-width: 12.5rem;
     max-width: 16rem;
     margin: 2rem auto 0;
 }
@@ -322,8 +321,9 @@ h3,
 
 /*===================== CONTAINER =====================*/
 
-body > * {
-    min-width: 15rem;
+.primary-container {
+    max-width: 60rem;
+    margin: 0 auto;
 }
 
 header {
@@ -391,13 +391,11 @@ footer {
 .work-images-list {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     grid-row-gap: 1rem;
     grid-column-gap: 0.5rem;
-    max-width: 62.5rem;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
     list-style: none;
 }
 
@@ -451,20 +449,13 @@ footer {
 
     .home-image-container,
     .about-image-container {
+        min-width: 12.5rem;
         grid-area: img;
         z-index: 5;
         margin-top: 0;
     }
     
     /*===================== CONTAINER =====================*/
-
-    .home,
-    header,
-    .about,
-    .services-body {
-        margin: 0 auto;
-        max-width: 60rem;
-    }
 
     .home,
     .about {

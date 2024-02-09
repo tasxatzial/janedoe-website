@@ -14,7 +14,7 @@
     <script async src="https://unpkg.com/focus-visible"></script>
 </head>
 <body>
-    <header>
+    <header class="primary-container">
         <a href="#" aria-label="devjane">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 12" class="logo" aria-labelledby="devjane" role="img">
                 <title id="devjane">devjane</title>
@@ -31,7 +31,7 @@
             </ul>
         </nav>
     </header>
-    <section id="home" class="home" aria-labelledby="home-title">
+    <section id="home" class="primary-container home" aria-labelledby="home-title">
         <h1 id="home-title" class="home-title">Hi, I'm <strong>Jane Doe</strong></h1>
         <p class="subtitle home-subtitle">front-end dev</p>
         <div class="home-image-container">
@@ -39,58 +39,66 @@
         </div>
     </section>
     <section id="services" class="services" aria-labelledby="services-title">
-        <h2 id="services-title" class="services-title">What I do</h2>
-        <div class="services-body">
-            <div class="service-info">
-                <h3>Design + Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="primary-container">
+            <h2 id="services-title" class="services-title">What I do</h2>
+            <div class="services-body">
+                <div class="service-info">
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="service-info">
+                    <h3>E-Commerce</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="service-info">
+                    <h3>WordPress</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
-            <div class="service-info">
-                <h3>E-Commerce</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="service-info">
-                <h3>WordPress</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
+            <a href="#work" class="btn">my work</a>
         </div>
-        <a href="#work" class="btn">my work</a>
     </section>
-    <section id="about" class="about" aria-labelledby="about-title">
-        <h2 id="about-title" class="about-title">Who I am</h2>
-        <p class="subtitle about-subtitle">Designer & developer based out of NYC</p>
-        <div class="about-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="about-image-container">
-            <img src="img/devjane-02.jpg" alt="jane joe leaning against a bus" class="about-image rounded-image">
+    <section id="about" aria-labelledby="about-title">
+        <div class="about primary-container">
+            <h2 id="about-title" class="about-title">Who I am</h2>
+            <p class="subtitle about-subtitle">Designer & developer based out of NYC</p>
+            <div class="about-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="about-image-container">
+                <img src="img/devjane-02.jpg" alt="jane joe leaning against a bus" class="about-image rounded-image">
+            </div>
         </div>
     </section>
     <section id="work" class="work" aria-labelledby="work-title">
-        <h2 id="work-title" class="work-title">My work</h2>
-        <p class="subtitle work-subtitle">A selection of my range of work</p>
-        <ul class="work-images-list" role="list" aria-label="work list">
-            <li><a href="project.html" class="work-link rounded-image"><img src="img/portfolio-01.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-02.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-03.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-04.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-05.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-06.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-07.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-08.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-09.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-            <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-10.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
-        </ul>
+        <div class="primary-container">
+            <h2 id="work-title" class="work-title">My work</h2>
+            <p class="subtitle work-subtitle">A selection of my range of work</p>
+            <ul class="work-images-list" role="list" aria-label="work list">
+                <li><a href="project.html" class="work-link rounded-image"><img src="img/portfolio-01.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-02.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-03.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-04.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-05.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-06.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-07.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-08.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-09.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+                <li><a href="#work" class="work-link rounded-image"><img src="img/portfolio-10.jpg" alt="" class="work-image"><span class="project-title">Project title</span></a></li>
+            </ul>
+        </div>
     </section>
     <footer>
-        <a href="mailto:hello@jave.dev" class="footer-emailto" aria-label="contact e-mail">hello@jave.dev</a>
-        <ul class="social-list" role="list" aria-label="social links">
-            <li><a href="https://codepen.io" class="social-link" aria-label="codepen"><i class="fa-brands fa-codepen"></i></a></li>
-            <li><a href="https://dribble.com" class="social-link" aria-label="dribble"><i class="fa-brands fa-dribbble"></i></a></li>
-            <li><a href="https://twitter.com" class="social-link" aria-label="twitter"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="https://github.com" class="social-link" aria-label="github"><i class="fa-brands fa-github"></i></a></li>
-        </ul>
+        <div class="primary-container">
+            <a href="mailto:hello@jave.dev" class="footer-emailto" aria-label="contact e-mail">hello@jave.dev</a>
+            <ul class="social-list" role="list" aria-label="social links">
+                <li><a href="https://codepen.io" class="social-link" aria-label="codepen"><i class="fa-brands fa-codepen"></i></a></li>
+                <li><a href="https://dribble.com" class="social-link" aria-label="dribble"><i class="fa-brands fa-dribbble"></i></a></li>
+                <li><a href="https://twitter.com" class="social-link" aria-label="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://github.com" class="social-link" aria-label="github"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
